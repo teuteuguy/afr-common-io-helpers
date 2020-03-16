@@ -33,7 +33,7 @@ typedef int32_t common_io_err_t;
  * @return  COMMON_IO_SUCCESS success
  *          COMMON_IO_FAIL errors found
 */
-common_io_err_t readI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
+common_io_err_t eReadI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
 			
 /**
  * @brief   Write a number of bytes to an I2C slave
@@ -45,6 +45,6 @@ common_io_err_t readI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t
  * @return  COMMON_IO_SUCCESS success
  *          COMMON_IO_FAIL errors found
 */
-common_io_err_t writeI2cBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
+common_io_err_t eWriteI2CBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
   
 #endif // _COMMON_IO_HELPERS_H_

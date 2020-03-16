@@ -13,10 +13,10 @@
 
 /*-----------------------------------------------------------*/
 
-common_io_err_t readI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length )
+common_io_err_t eReadI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length )
 {
     // Return value of I2C functions.
-    bmp280_err_t res = COMMON_IO_FAIL;
+    common_io_err_t res = COMMON_IO_FAIL;
 
     COMMON_IO_CHECK_HANDLER( I2CHandle );
 
@@ -77,10 +77,10 @@ common_io_err_t readI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t
 
 /*-----------------------------------------------------------*/
 
-common_io_err_t writeI2CBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length )
+common_io_err_t eWriteI2CBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length )
 {
     // Return value of I2C functions.
-    bmp280_err_t res = COMMON_IO_FAIL;
+    common_io_err_t res = COMMON_IO_FAIL;
 
     COMMON_IO_CHECK_HANDLER( I2CHandle );
 
