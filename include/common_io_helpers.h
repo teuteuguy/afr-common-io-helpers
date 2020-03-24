@@ -46,5 +46,9 @@ common_io_err_t eReadI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_
  *          COMMON_IO_FAIL errors found
 */
 common_io_err_t eWriteI2CBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
-  
+
+#define LIBRARY_LOG_LEVEL IOT_LOG_INFO
+#define LIBRARY_LOG_NAME  "common-io-helpers"
+#include "iot_logging_setup.h"
+
 #endif // _COMMON_IO_HELPERS_H_

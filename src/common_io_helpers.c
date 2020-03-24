@@ -27,8 +27,6 @@ common_io_err_t eReadI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_
     uint16_t usReadBytes = 0;
     uint16_t usWriteBytes = 0;
 
-    uint8_t address = values[0];
-
     // Set slave address.
     res = iot_i2c_ioctl( I2CHandle, eI2CSetSlaveAddr, &ioCtlBuffer );
     if ( res != IOT_I2C_SUCCESS )
@@ -88,10 +86,7 @@ common_io_err_t eWriteI2CBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint
     uint16_t ioCtlBuffer = address;
  
     // Number of read/write bytes.
-    uint16_t usReadBytes = 0;
     uint16_t usWriteBytes = 0;
-
-    uint8_t address = values[0];
 
     // Set slave address.
     res = iot_i2c_ioctl( I2CHandle, eI2CSetSlaveAddr, &ioCtlBuffer );
