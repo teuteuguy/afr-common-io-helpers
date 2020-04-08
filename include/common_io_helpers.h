@@ -26,29 +26,25 @@ typedef int32_t common_io_err_t;
 /**
  * @brief   Read an array of bytes from an I2C slave
  * 
- * @param   I2CHandle:  external I2C handle from Common IO I2C init
+ * @param   pxI2CPeripheral:  external I2C handle from Common IO I2C init
  * @param   address:    I2C slave device address (not the register address to read from)
  * @param   value:      external array to hold data. Put starting register in values[0]
  * @param   length:     number of bytes to read
  * @return  COMMON_IO_SUCCESS success
  *          COMMON_IO_FAIL errors found
 */
-common_io_err_t eReadI2CBytes( IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
+common_io_err_t eReadI2CBytes( IotI2CHandle_t const pxI2CPeripheral, uint8_t address, uint8_t * values, uint8_t length );
 			
 /**
  * @brief   Write a number of bytes to an I2C slave
  * 
- * @param   I2CHandle:  external I2C handle from Common IO I2C init
+ * @param   pxI2CPeripheral:  external I2C handle from Common IO I2C init
  * @param   address:    I2C slave device address (not the register address to read from)
  * @param   value:      external array of data to write. Put starting register in values[0]
  * @param   length:     number of bytes to write
  * @return  COMMON_IO_SUCCESS success
  *          COMMON_IO_FAIL errors found
 */
-common_io_err_t eWriteI2CBytes(  IotI2CHandle_t I2CHandle, uint8_t address, uint8_t * values, uint8_t length );
-
-#define LIBRARY_LOG_LEVEL IOT_LOG_INFO
-#define LIBRARY_LOG_NAME  "common-io-helpers"
-#include "iot_logging_setup.h"
+common_io_err_t eWriteI2CBytes( IotI2CHandle_t const pxI2CPeripheral, uint8_t address, uint8_t * values, uint8_t length );
 
 #endif // _COMMON_IO_HELPERS_H_
