@@ -1,5 +1,6 @@
 /**
- * common_io_helpers.c - Helper library to interact with common-io
+ * @file common_io_helpers.c
+ * @brief Helper library to interact with common-io
  *
  * Include this header file to use the component.
  *
